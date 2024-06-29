@@ -16,8 +16,8 @@ const QuestionSection = ({ mockInterviewQuestion, activeQuestionIndex }) => {
 			alert("Sorry your Browser does not support text to speech ")
 		}
 	}
-	console.log("ADIIIIIIIILLLLLLLLLLLL", mockInterviewQuestion);
-	console.log('Type of:',typeof(mockInterviewQuestion));
+	// console.log("ADIIIIIIIILLLLLLLLLLLL", mockInterviewQuestion);
+	// console.log('Type of:',typeof(mockInterviewQuestion));
 	return mockInterviewQuestion && (
 		<div className="p-5 border rounded-lg my-10">
 			<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
