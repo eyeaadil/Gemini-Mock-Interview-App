@@ -40,14 +40,13 @@ export default function Home() {
             </button>
           </div>
           <div className="md:w-1/2 flex justify-center mt-10 md:mt-0 ">
-            
-          <Image
-                src="/interview-image.png"
-                alt="Interview preparation"
-                width={500}
-                height={500}
-                className="rounded-full "
-              />
+            <Image
+              src="/interview-image.png"
+              alt="Interview preparation"
+              width={500}
+              height={500}
+              className="rounded-full "
+            />
           </div>
         </div>
       </main>

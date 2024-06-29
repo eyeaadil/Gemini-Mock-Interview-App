@@ -20,10 +20,10 @@ export default function Page() {
         </div>
         <div className="md:w-1/2 flex justify-center md:justify-start">
           {/* <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md"> */}
-            <SignUp />
+            <SignUp signInForceRedirectUrl="/dashboard" />
           {/* </div> */}
         </div>
       </div>
     </div>
-  );
+  )
 }

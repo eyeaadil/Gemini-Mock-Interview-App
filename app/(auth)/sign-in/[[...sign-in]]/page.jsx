@@ -1,6 +1,10 @@
+'use client'
 import { SignIn } from "@clerk/nextjs";
+// import { useRouter } from "next/navigation";
 
 export default function SignInPage() {
+//   const router = useRouter();
+
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-500 via-purple-500 to-pink-300 flex items-center justify-center">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-40 p-6">
@@ -20,7 +24,7 @@ export default function SignInPage() {
         </div>
         <div className="md:w-1/2 flex justify-center md:justify-start">
           {/* <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md"> */}
-            <SignIn />
+            <SignIn redirectUrl="/dashboard" />
           {/* </div> */}
         </div>
       </div>
