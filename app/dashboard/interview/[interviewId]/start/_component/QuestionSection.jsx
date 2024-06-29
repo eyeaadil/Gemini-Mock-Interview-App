@@ -2,6 +2,7 @@ import { Lightbulb, Volume2 } from "lucide-react";
 import React from "react";
 
 const QuestionSection = ({ mockInterviewQuestion, activeQuestionIndex }) => {
+	// console.log("FFFFFFFFF",typeof(mockInterviewQuestion));
 	const textToSpeech = (text)=>{
 		if('speechSynthesis' in window){
 			const speech = new SpeechSynthesisUtterance(text);
@@ -12,15 +13,16 @@ const QuestionSection = ({ mockInterviewQuestion, activeQuestionIndex }) => {
 			// speech.lang = 'en-US';
 			window.speechSynthesis.speak(speech);
 		}else{
-			alert("Sory your Browser does not support text to speech ")
+			alert("Sorry your Browser does not support text to speech ")
 		}
 	}
-	// console.log("ADIIIIIIIILLLLLLLLLLLL", mockInterviewQuestion);
+	console.log("ADIIIIIIIILLLLLLLLLLLL", mockInterviewQuestion);
+	console.log('Type of:',typeof(mockInterviewQuestion));
 	return mockInterviewQuestion && (
 		<div className="p-5 border rounded-lg my-10">
 			<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
 				{mockInterviewQuestion &&
-					mockInterviewQuestion.map((question, index) => (
+					mockInterviewQuestion?.map((question, index) => (
 						<>
 							<h2
 								className={`p-2 bg-secondary rounded-full text-center text-xs md:text-sm cursor-pointer ${

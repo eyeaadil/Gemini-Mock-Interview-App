@@ -26,13 +26,15 @@ const StartInterview = ({params}) => {
 			.select()
 			.from(MockInterview)
 			.where(eq(MockInterview.mockId, params.interviewId));
-		// console.log("vsdsdhvbvfdvn ndf df ", result);
+		// console.log("vsdsdhvbvfdvn ndf df ",typeof(result));
+        // const jsonstring = JSON.stringify(result[0].jsonMockResp);
+        const jsonRes = JSON.parse(result[0].jsonMockResp)
+
+        // const json = JSON.parse(jsonstring);
+        // console.log("json",typeof(json));
+        setMockinterviewQuestion(jsonRes)
 		setInterviewData(result[0]);
 
-        const jsonMockResp = JSON.parse(result[0].jsonMockResp)
-        // console.log(jsonMockResp)  
-        setMockinterviewQuestion(jsonMockResp);
-        setInterviewData(result[0])
 	};
   return ( 
     <div>

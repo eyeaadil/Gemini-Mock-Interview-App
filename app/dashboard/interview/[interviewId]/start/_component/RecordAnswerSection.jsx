@@ -19,6 +19,8 @@ const RecordAnswerSection = ({
 	activeQuestionIndex,
 	interviewData,
 }) => {
+
+	
 	const [isClient, setIsClient] = useState(false);
 	const [userAnswer, setUserAnswer] = useState("");
 	const [loading, setLoading] = useState(false);
