@@ -28,7 +28,8 @@ const Feedback = ({ params }) => {
 			.from(UserAnswer)
 			.where(eq(UserAnswer.mockIdRef, params.interviewId))
 			.orderBy(UserAnswer.id);
-		// console.log("jjjjjjjjjjj", result);
+		console.log("jjjjjjjjjjj", result);
+		console.log("ADIl");
 		setFeedbackList(result);
 	};
 	return (

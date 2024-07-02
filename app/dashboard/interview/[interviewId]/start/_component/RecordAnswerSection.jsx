@@ -111,7 +111,7 @@ const RecordAnswerSection = ({
 				.replace("```json", "")
 				.replace("```", "");
 
-			// console.log("tanzu",mockJsonResp);
+			console.log("tanzu",mockJsonResp);
 			// now convert this into json
 			const jsonFeedbackResp = JSON.parse(mockJsonResp);
 			// console.log("tanzu", jsonFeedbackResp); //Now we need to set this inside our database
