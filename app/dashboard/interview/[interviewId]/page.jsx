@@ -26,7 +26,9 @@ const Interview = ({ params }) => {
 			.select()
 			.from(MockInterview)
 			.where(eq(MockInterview.mockId, params.interviewId));
-		// console.log("vsdsdhvbvfdvn ndf df ", result);
+		console.log("vsdsdhvbvfdvn ndf df ", result);
+		console.log("Mohabbat",result[0].jsonMockResp);
+		console.log("ddddd",typeof(result[0].jsonMockResp));
 		setInterviewData(result[0]);
 	};
 	return (

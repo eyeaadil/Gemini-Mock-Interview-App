@@ -98,7 +98,7 @@ const RecordAnswerSection = ({
     setLoading(true)
     const feedbackPrompt =
 				"Question:" +
-				mockInterviewQuestion[activeQuestionIndex]?.Question +
+				mockInterviewQuestion[activeQuestionIndex]?.question +
 				", User Answer:" +
 				userAnswer +
 				", Depends on question and user answer for given interview question " +
@@ -146,6 +146,7 @@ const RecordAnswerSection = ({
 			<div className="mt-20 flex flex-col justify-center items-center bg-black rounded-lg p-8">
 				<Image
 					src={"/webcam-icon.png"}
+					alt="webcam-image"
 					width={200}
 					height={200}
 					className="absolute"

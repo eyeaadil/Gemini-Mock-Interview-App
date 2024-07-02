@@ -26,16 +26,16 @@ const StartInterview = ({params}) => {
 			.select()
 			.from(MockInterview)
 			.where(eq(MockInterview.mockId, params.interviewId));
-		// console.log("vsdsdhvbvfdvn ndf df ",typeof(result));
-        // const jsonstring = JSON.stringify(result[0].jsonMockResp);
-        const jsonRes = JSON.parse(result[0].jsonMockResp)
+		// console.log("vsdsdhvbvfdvn ndf df ",result);
 
-        // const json = JSON.parse(jsonstring);
-        // console.log("json",typeof(json));
+        const jsonRes = JSON.parse(result[0].jsonMockResp)
+        console.log("QQQQQQ",jsonRes);
+        console.log("TTTT",typeof(jsonRes));
         setMockinterviewQuestion(jsonRes)
 		setInterviewData(result[0]);
-
 	};
+
+    console.log("sssss",mockInterviewQuestion);
   return ( 
     <div>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>

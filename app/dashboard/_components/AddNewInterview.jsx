@@ -36,7 +36,7 @@ const AddNewInterview = () => {
         setLoading(true);
         e.preventDefault();
         // console.log(jobPosition, jobDesc, jobExperience);
-        const inputPrompt = `Job Position: ${jobPosition}, Job Description: ${jobDesc}, years of experience: ${jobExperience}, Depends on this information please give me 5 interview Question with Answered in json format. Give Question And answered as field in json.`;
+        const inputPrompt = `Job Position: ${jobPosition}, Job Description: ${jobDesc}, years of experience: ${jobExperience}, Depends on this information please give me 5 interview Question with Answered in json format.`;
         
             const result = await chatSession.sendMessage(inputPrompt);
             const MockjsonRes = result.response.text().replace('```json', '').replace('```', '');

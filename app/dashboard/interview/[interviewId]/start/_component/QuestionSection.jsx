@@ -3,6 +3,7 @@ import React from "react";
 
 const QuestionSection = ({ mockInterviewQuestion, activeQuestionIndex }) => {
 	// console.log("FFFFFFFFF",typeof(mockInterviewQuestion));
+	console.log("yyyyyy",mockInterviewQuestion);
 	const textToSpeech = (text)=>{
 		if('speechSynthesis' in window){
 			const speech = new SpeechSynthesisUtterance(text);
@@ -23,7 +24,7 @@ const QuestionSection = ({ mockInterviewQuestion, activeQuestionIndex }) => {
 			<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
 				{mockInterviewQuestion &&
 					mockInterviewQuestion?.map((question, index) => (
-						<>
+						<div key={index}>
 							<h2
 								className={`p-2 bg-secondary rounded-full text-center text-xs md:text-sm cursor-pointer ${
 									activeQuestionIndex == index && "bg-violet-500 text-white"
@@ -32,12 +33,12 @@ const QuestionSection = ({ mockInterviewQuestion, activeQuestionIndex }) => {
 								#Question {index + 1}
 							</h2>
 							{/* <p>{question.Question}</p> */}
-						</>
+						</div>
 					))}
 
 			</div>
-            <h2 className="my-5 text-md md:text-lg">{mockInterviewQuestion[activeQuestionIndex]?.Question}</h2>
-			<Volume2 className="cursor-pointer"  onClick={()=>textToSpeech(mockInterviewQuestion[activeQuestionIndex]?.Question)}/>
+            <h2 className="my-5 text-md md:text-lg">{mockInterviewQuestion[activeQuestionIndex]?.question || mockInterviewQuestion[activeQuestionIndex]?.Question}</h2>
+			<Volume2 className="cursor-pointer"  onClick={()=>textToSpeech(mockInterviewQuestion[activeQuestionIndex]?.question || mockInterviewQuestion[activeQuestionIndex]?.Question)}/>
             <div className="border rounded-lg bg-blue-100 p-5 mt-20">
                 <h2 className="flex gap-3 items-center text-blue-700">
                     <Lightbulb/>

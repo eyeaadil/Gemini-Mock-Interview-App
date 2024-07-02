@@ -18,7 +18,7 @@ export default function Home() {
       <header className="w-full p-5">
         <nav className="container mx-auto flex justify-between items-center">
           {/* <div className="text-2xl font-bold">MockInterviewAI</div> */}
-          <Image src={'/logo.png'} width={70} height={70}/>
+          <Image src={'/logo.png'} alt="Logo" width={70} height={70}/>
           <button 
             onClick={handleSignIn} 
             className="px-6 py-2 bg-white text-indigo-500 font-semibold rounded-full shadow-lg hover:bg-gray-200 transition duration-300"
